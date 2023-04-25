@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 COPY yarn.lock ./
+COPY ./node-chatgpt-api ./node-chatgpt-api
 RUN yarn install --frozen-lockfile --production && yarn cache clean
 
 COPY ./tsconfig.json ./tsconfig.json
